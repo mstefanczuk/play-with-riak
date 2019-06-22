@@ -1,0 +1,11 @@
+- Dodanie dokumentu
+Dodany dokument:
+{"name": "Neverhood", "price": 10, "publisher": "DreamWorks Interactive", "releaseYear": 1996}
+
+- Modyfikacja dokumentu
+Zmodyfikowany dokument:
+{"name": "Neverhood", "price": 20, "publisher": "DreamWorks Interactive", "releaseYear": 1996}
+
+- Usuniecie dokumentu
+Proba probrania usunietego dokumentu:
+not found

@@ -1,0 +1,163 @@
+1. 
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "The Witcher 3", "price": 100, "publisher": "CD Projekt", "releaseYear": 2015}'  http://192.168.99.100:8098/buckets/s19950/keys/TheWitcher3
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 12:35:23 GMT
+Content-Type: application/json
+Content-Length: 0
+
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "Cyberpunk 2077", "price": 300, "publisher": "CD Projekt", "releaseYear": 2020}'  http://192.168.99.100:8098/buckets/s19950/keys/Cyberpunk2077
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 12:36:11 GMT
+Content-Type: application/json
+Content-Length: 0
+
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "Factorio", "price": 120, "publisher": "Wube Software", "releaseYear": 2016}'  http://192.168.99.100:8098/buckets/s19950/keys/Factorio
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 12:36:51 GMT
+Content-Type: application/json
+Content-Length: 0
+
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "Red Dead Redemption 2", "price": 200, "publisher": "Rockstar Games", "releaseYear": 2018}'  http://192.168.99.100:8098/buckets/s19950/keys/RedDeadRedemption2
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 12:37:00 GMT
+Content-Type: application/json
+Content-Length: 0
+
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "Skyrim", "price": 140, "publisher": "Bethesda Softworks", "releaseYear": 2011}'  http://192.168.99.100:8098/buckets/s19950/keys/Skyrim
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 12:37:09 GMT
+Content-Type: application/json
+Content-Length: 0
+
+2.
+- Polecenie:
+curl -i http://192.168.99.100:8098/buckets/s19950/keys/Factorio
+- Odpowiedź:
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI83Vv4A+3E/jJDhBLZ81gZdp+rusaXBQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s19950>; rel="up"
+Last-Modified: Sun, 16 Jun 2019 14:31:23 GMT
+ETag: "eIulCmp5B3aW0sXrqEEbR"
+Date: Sun, 16 Jun 2019 14:32:30 GMT
+Content-Type: application/json
+Content-Length: 85
+
+{"name": "Factorio", "price": 120, "publisher": "Wube Software", "releaseYear": 2016}
+
+3.
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "Factorio", "price": 120, "publisher": "Wube Software", "releaseYear": 2016, "genre": "Real-time strategy"}'  http://192.168.99.100:8098/buckets/s19950/keys/Factorio
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 14:28:34 GMT
+Content-Type: application/json
+Content-Length: 0
+
+4.
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "Factorio", "price": 120, "publisher": "Wube Software", "releaseYear": 2016}'  http://192.168.99.100:8098/buckets/s19950/keys/Factorio
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 14:30:03 GMT
+Content-Type: application/json
+Content-Length: 0
+
+5.
+- Polecenie:
+curl -i –XPUT -H "Content-Type: application/json" -d '{"name": "Factorio", "price": 150, "publisher": "Wube Software", "releaseYear": 2016}'  http://192.168.99.100:8098/buckets/s19950/keys/Factorio
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 14:31:23 GMT
+Content-Type: application/json
+Content-Length: 0
+
+6. 
+-Polecenie:
+curl -i -XDELETE http://192.168.99.100:8098/buckets/s19950/keys/Factorio
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 14:33:38 GMT
+Content-Type: application/json
+Content-Length: 0
+
+7.
+- Polecenie:
+curl -i http://192.168.99.100:8098/buckets/s19950/keys/Factorio
+- Odpowiedź:
+HTTP/1.1 404 Object Not Found
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 14:33:47 GMT
+Content-Type: text/plain
+Content-Length: 10
+
+not found
+
+8.
+- Polecenie:
+curl -i –XPOST -H "Content-Type: application/json" -d '{"name": "GTA V"}'  http://192.168.99.100:8098/buckets/s19950/keys
+- Odpowiedź:
+HTTP/1.1 201 Created
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Location: /buckets/s19950/keys/Fp05AvoL9y5BZK9h9XEcKdeSyJG
+Date: Sun, 16 Jun 2019 15:02:13 GMT
+Content-Type: application/json
+Content-Length: 0
+
+9.
+- Polecenie:
+curl -i http://192.168.99.100:8098/buckets/s19950/keys/Fp05AvoL9y5BZK9h9XEcKdeSyJG
+- Odpowiedź:
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI83Vv4A+1EM8SBbKYMpkTGPFaGr1errvFlAQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s19950>; rel="up"
+Last-Modified: Sun, 16 Jun 2019 15:02:13 GMT
+ETag: "1JfUCajrDtqA5Eh8PFjQBb"
+Date: Sun, 16 Jun 2019 15:04:48 GMT
+Content-Type: application/json
+Content-Length: 17
+
+{"name": "GTA V"}
+
+10.
+- Polecenie:
+curl -i -XDELETE http://192.168.99.100:8098/buckets/s19950/keys/Fp05AvoL9y5BZK9h9XEcKdeSyJG
+- Odpowiedź:
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sun, 16 Jun 2019 15:05:39 GMT
+Content-Type: application/json
+Content-Length: 0
